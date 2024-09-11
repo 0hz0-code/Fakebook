@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakebook</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .sidebar {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transform: translateY(60px);
+        }
+
+        .sidebar .nav-link {
+            color: #36393f;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 15px;
+        }
+
+        .sidebar .nav-link:hover {
+            background-color: #f2f2f2;
+            border-radius: 8px;
+        }
+
+        .sidebar .nav-link i {
+            font-size: 16px;
+        }
+
+        .profile-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .profile-card h4 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .profile-card p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .profile-card .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .profile-card .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .profile-card .profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .profile-card .profile-info span {
+            color: #555;
+        }
+
+        .profile-card .profile-info .info-label {
+            font-weight: bold;
+        }
+
+        .profile-card .profile-info .info-value {
+            color: #36393f;
+        }
+
+        .profile-card .profile-actions {
+            margin-top: 20px;
+        }
+
+        .profile-card .profile-actions button {
+            background-color: #4267B2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .profile-card .profile-actions button:hover {
+            opacity: 0.8;
+        }
+
+        .profile-card .profile-actions .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 15px;
+        }
+
+        .profile-card .profile-actions .nav-link i {
+            font-size: 16px;
+        }
+
+        .profile-card .profile-actions .nav-link:hover {
+            background-color: #f2f2f2;
+            border-radius: 8px;
+        }
+
+        .header {
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+        }
+
+        .header .nav-link {
+            color: #36393f;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header .nav-link:hover {
+            background-color: #f2f2f2;
+            border-radius: 8px;
+        }
+
+        .header .nav-link i {
+            font-size: 16px;
+        }
+
+        .header .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header .search-bar input {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .header .search-bar button {
+            background-color: #4267B2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .header .search-bar button:hover {
+            opacity: 0.8;
+        }
+
+        .user-profile {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .name-logo {
+            transform: translate(550px, 50px);
+            font-size: 33px;
+            color: #4267B2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="name-logo">
+        Fakebook
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <a href="#" class="nav-link active">
+                        <i class="bi bi-house-door"></i>
+                        Home
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-person"></i>
+                        Friends
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-globe"></i>
+                        Orders
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-list-ul"></i>
+                        Products
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="bi bi-person-circle"></i>
+                        Customers
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="header">
+                    <nav class="nav">
+                        <a href="#" class="nav-link">
+                            <i class="bi bi-link-45deg"></i>
+                            Link
+                        </a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-caret-down-fill"></i>
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        <a href="#" class="nav-link">
+                            Disabled
+                        </a>
+                    </nav>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search">
+                        <button type="button">Search</button>
+                    </div>
+                </div>
+                <div class="profile-card">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="profile-image">
+                                <img src="./img/photo_2024-09-11_19-07-09.jpg" alt="Profile Image">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h4>Скурчаев Даниил</h4>
+                            <p>With supporting text below as a natural lead-in to additional content.</p>
+                            <div class="profile-info">
+                                <span class="info-label">День рождения:</span>
+                                <span class="info-value">17 июня</span>
+                                <span class="info-label">Город:</span>
+                                <span class="info-value">Таганрог</span>
+                                <span class="info-label">Семейное положение:</span>
+                                <span class="info-value">Отличное</span>
+                            </div>
+                            <div class="profile-actions">
+                                <button type="button">Редактировать</button>
+                                <a href="#" class="nav-link">
+                                    <i class="bi bi-bar-chart"></i>
+                                    Статистика
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <i class="bi bi-card-checklist"></i>
+                                    Воспоминания
+                                </a>
+                                <a href="#" class="nav-link">
+                                    <i class="bi bi-envelope"></i>
+                                    Письма
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
